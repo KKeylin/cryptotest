@@ -31,3 +31,7 @@ export function handleNotification(msg, type = 'info') {
     autoClose: 1500,
   });
 }
+
+export function criptoNormalizer(a) {
+  return a / 100000000;
+}

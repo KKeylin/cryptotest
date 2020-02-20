@@ -14,11 +14,15 @@ const customTheme = createMuiTheme({
       dark: '#191D21',
     },
     primary: {
-      main: '#FFA117',
+      main: '#00c3ff',
       contrastText: '#FFFFFF',
     },
     secondary: {
       main: '#2C333A',
+      contrastText: '#FFFFFF',
+    },
+    grey: {
+      main: 'rgba(255, 255, 255, 0.5)',
       contrastText: '#FFFFFF',
     },
     error: {

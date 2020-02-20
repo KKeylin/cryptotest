@@ -1,15 +1,40 @@
-import { API } from './api';
+import axios from 'axios';
+import { ADDRESS } from 'constants/main';
 
-const DOMAIN = process.env.REACT_APP_DOMAIN;
+class API {
+  constructor(domain, options = {}) {
+    this.axios = axios.create({
+      baseURL: domain,
+      ...options,
+    });
 
-export const api = new API(DOMAIN);
+    const createMethod = method => {
+      this[method] = this._createRequest(method);
+    };
 
-export const getUrlWithSearchParams = (url, params = {}) => {
+    ['get', 'post', 'patch', 'put', 'delete'].forEach(createMethod);
+  }
+
+  _createRequest(method) {
+    return async function(url, body, config) {
+      const response = await this.axios[method](url, body, config);
+      return (response && response.data) || null;
+    };
+  }
+}
+
+const DOMAIN = 'https://api.blockcypher.com/v1/btc/test3/';
+
+const api = new API(DOMAIN);
+
+// const TOKEN = 'c34c62a764594f8281815148ed9930fb';
+
+export const getUrlWithSearchParams = (params = {}) => {
   const urlSearch = new URLSearchParams();
-
   Object.keys(params).forEach(key => {
     urlSearch.append(key, params[key]);
   });
+  // api.get(`${DOMAIN}?token=${TOKEN}`);
 
-  return `${url}?${urlSearch.toString()}`;
+  return () => api.get(`addrs/${ADDRESS}/full?${urlSearch.toString()}`);
 };

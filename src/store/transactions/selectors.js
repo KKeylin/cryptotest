@@ -1,5 +1,5 @@
-export const getUsersInstrumentsSequence = state => state.usersInstruments.instruments.dataSequence;
-export const getUsersInstrumentsItem = item => state => state.usersInstruments.instruments.data[item];
-export const getUsersInstrumentsItems = state => state.usersInstruments.instruments.data;
-export const getUsersInstrumentsLoading = state => state.usersInstruments.instruments.loading;
-export const getUsersInstrumentsItemsTotal = state => state.usersInstruments.instruments.pageable.totalElements;
+export const getTransactionsSent = state => state.transactions.total_sent;
+export const getTransactionsReceived = state => state.transactions.total_received;
+export const getTransactionsBalance = state => state.transactions.balance;
+export const getTransactionsTX = state => state.transactions.txs;
+export const getTransactionsLoading = state => state.transactions.loading;
