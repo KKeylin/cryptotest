@@ -1,12 +1,12 @@
 ## Test task
 
-Адрес на testnet Bitcoin: mrKQkNc62v7jWsoTWVpcy72kZzE2gjTTGc
+Bitcoin testnet address: mrKQkNc62v7jWsoTWVpcy72kZzE2gjTTGc
 
-- Получить список транзакций на blockchain testnet Bitcoin по данном адресу,
-  Определить, какие транзакции являются пополнением, какие транзакции являются отправкой средств, так же к каждой транзакции нужно добавить информацию о том что перевод состоялся или еще обрабатывается.
-- Выводить необходимо только те транзакции у которых количество подтверждение >= 3 и не обработанные транзакции.
-- Добавить на страницу пагинацию (стоит учесть что пагинация делается, не с помощью page, per, а с помощью limit и after определенного block height)
-- Из библиотек необходимо использовать react, redux with hooks, saga, reselect и material ui. Никаких class компонентов не должно быть.
-- Вывод сколько всего средств находится есть у определенного адреса
-- Сколько всего транзакций было совершенно за все время существования адресса
-- Сколько средств было потрачено и получено за всю историю адресса (просто аккумулятивная сумма)
+- Get a list of transactions on the blockchain testnet Bitcoin at this address,
+- Determine which transactions are replenishment, which transactions are the sending of funds, as well as information about whether the transfer has taken place or is still being processed, must be added to each transaction.
+- Display only those transactions in which the amount of confirmation> = 3 and not processed transactions.
+- Add pagination to the page
+- From libraries, you need to use react, redux with hooks, saga, reselect and material ui. No class components should be.
+- Conclusion how much money is at a certain address
+- How many total transactions have been completely for the entire existence of the address
+- How much money was spent and received in the entire history of the address (just an accumulative amount)
