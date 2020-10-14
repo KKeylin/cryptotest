@@ -25,7 +25,7 @@ function TopLevelLayout() {
             position: 'fixed',
             top: 0,
             left: 0,
-            zIndex: '99999',
+            zIndex: '9999',
             padding: 0,
           }}
         />
